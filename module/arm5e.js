@@ -32,9 +32,14 @@ Hooks.once('init', async function() {
     decimals: 2
   };
 
-  // Define custom Entity classes
-  CONFIG.Actor.entityClass = ArM5ePCActor;
-  CONFIG.Item.entityClass = ArM5eItem;
+	/*  
+		LCD 2021-08-10
+		Substituted documentClass for deprecated entityClass
+	*/
+
+  // Define custom Document classes
+  CONFIG.Actor.documentClass = ArM5ePCActor;
+  CONFIG.Item.documentClass = ArM5eItem;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
